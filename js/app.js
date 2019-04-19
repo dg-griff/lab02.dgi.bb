@@ -2,13 +2,37 @@
 
 alert('Welcome to DGi Boss! Let\'s play a game.');
 
-var cars = ['toyota', 'suzuki', 'mazda'];
-var opsys = ['android', 'iOS'];
-var genre = ['reggae', 'soca', 'dancehall'];
-var colour = ['navy', 'teal', 'black'];
-var food = ['subway', 'chefette', 'chicken_barn'];
+var game_data = [
+    {
+        // car brands
+        question: "Is Suzuki my favourite?",
+        reply: "no"
+    },
 
-var questions = ['Is Suzuki my favourite?', 'Is Android my favourite?', 'Is Dancehall my favourite', 'Is Black my least favourite?', 'Do I eat at Subway the least?'];
+    { 
+        // mobile OS
+        question: "Is Android my favourite?",
+        reply: "yes"
+    },
+
+    {   
+        // music genres
+        question: "Is Dancehall my favourite?",
+        reply: "yes"
+    },
+
+    {
+        // colours
+        question: "Is Black my least favourite?",
+        reply: "no"
+    },
+
+    {
+        // restaurants
+        question: "Do I eat at Subway the least?",
+        reply: "no"
+    }
+];
 
 
 // Prompt user for car brand and get response
@@ -83,6 +107,11 @@ if ((food_answer === 'n') || (food_answer === 'no')) {
 
 
 
+// var cars = ['toyota', 'suzuki', 'mazda'];
+// var opsys = ['android', 'iOS'];
+// var genre = ['reggae', 'soca', 'dancehall'];
+// var colour = ['navy', 'teal', 'black'];
+// var food = ['subway', 'chefette', 'chicken_barn'];
 
 
 
