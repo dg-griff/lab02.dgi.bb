@@ -3,7 +3,7 @@
 body {
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     font-weight: 700;
-    color: white;
+    color: rgb(64,224,208);
     background-color: black;
     margin-left: 10px;
     margin-right: 10px;
@@ -17,6 +17,12 @@ h1 {
 }
 
 h4 {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+  color: rgb(64,224,208);
+}
+
+.port {
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   text-align: center;
   color: rgb(64,224,208);
@@ -49,9 +55,12 @@ li a:hover {
     border-color: black;
 }
 
-a:hover, a:visited, a:link, a:active
-{
+a:link, a:visited, a:hover, a:active {
     text-decoration: none;
+}
+
+.url {
+  color: rgb(64,224,208);
 }
 
 .info {
@@ -62,6 +71,32 @@ a:hover, a:visited, a:link, a:active
 img {
   margin: 0;
   padding: 5px 15px 15px 15px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: black;
+  padding: 10px;
+}
+
+.grid-item {
+  color: black;
+  background-color: black;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.thumb {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.thumb:hover {
+  box-shadow: 0 0 5px 5px rgba(64, 224, 208, 1);
 }
 
 @-webkit-keyframes zoomIn {
