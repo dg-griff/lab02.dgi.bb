@@ -1,20 +1,29 @@
-@import url(https://fonts.googleapis.com/css?family=Kaushan+Script|Luckiest+Guy|Open+Sans:bold|Orbitron:bold|Permanent+Marker|Russo+One|Special+Elite|Quantico:bold);
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Luckiest+Guy|Open+Sans:bold|Orbitron:bold|Permanent+Marker|Russo+One|Special+Elite|Quantico:bold|Acme|Exo+2:400,700|Montserrat:400,500,600,700|Play|Roboto:400,700|Ubuntu:400,700');
 
 body {
-    font-family: 'Orbitron', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 700;
+    color: white;
     background-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 h1 {
+    font-family: 'Orbitron', 'Helvetica', 'Arial', sans-serif;
     text-align: center;
     padding: 25px 50px;
+    font-size: 1.75em;
 }
 
 h4 {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   text-align: center;
+  color: rgb(64,224,208);
 }
 
-ul {
+.navi {
+  font-family: 'Orbitron', 'Helvetica', 'Arial', sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -22,11 +31,12 @@ ul {
   background-color: white;
 }
 
-li {
+.navbar {
   float: left;
 }
 
 li a {
+  list-style-type: none;
   display: block;
   color: black;
   text-align: center;
@@ -42,6 +52,11 @@ li a:hover {
 a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
+}
+
+.info {
+  margin: 15px;
+  list-style-type: circle;
 }
 
 img {
