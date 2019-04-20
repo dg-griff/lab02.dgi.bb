@@ -1,40 +1,86 @@
 'use strict';
 
-// alert('Welcome to DGi Boss! Let\'s play a game.');
+setTimeout(function() { alert('Welcome to DGi Boss! Let\'s play a game.'); }, 5000);
 
-var game_data = [
-    {
-        // car brands
-        question: "Is Suzuki my favourite?",
-        reply: "no"
-    },
 
-    { 
-        // mobile OS
-        question: "Is Android my favourite?",
-        reply: "yes"
-    },
+var questions = ['Is Suzuki my favourite car manufactuer?', 'Is Android my favourite mobile OS?', ' Is Dancehall my favourite music genre?', 'Is Black my least favourite colour?', 'Do I seldom eat at Subway restaurants?' ];
 
-    {   
-        // music genres
-        question: "Is Dancehall my favourite?",
-        reply: "yes"
-    },
+var replies = ['no', 'yes', 'yes', 'no', 'no'];
 
-    {
-        // colours
-        question: "Is Black my least favourite?",
-        reply: "no"
-    },
+var response1 = prompt(questions[0]).toLowerCase();
 
-    {
-        // restaurants
-        question: "Do I eat at Subway the least?",
-        reply: "no"
-    }
-];
 
-setTimeout(function() { alert("Hello"); }, 5000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var game_data = [
+//     {
+//         // car brands
+//         question: "Is Suzuki my favourite?",
+//         reply: "no"
+//     },
+
+//     { 
+//         // mobile OS
+//         question: "Is Android my favourite?",
+//         reply: "yes"
+//     },
+
+//     {   
+//         // music genres
+//         question: "Is Dancehall my favourite?",
+//         reply: "yes"
+//     },
+
+//     {
+//         // colours
+//         question: "Is Black my least favourite?",
+//         reply: "no"
+//     },
+
+//     {
+//         // restaurants
+//         question: "Do I eat at Subway the least?",
+//         reply: "no"
+//     }
+// ];
+
+setTimeout(function() { alert('Welcome to DGi Boss! Let\'s play a game.'); }, 5000);
 
 
 // // Prompt user for car brand and get response
