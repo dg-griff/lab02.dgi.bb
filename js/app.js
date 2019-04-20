@@ -1,14 +1,24 @@
 'use strict';
 
-setTimeout(function() { alert('Welcome to DGi Boss! Let\'s play a game.'); }, 5000);
+//setTimeout(function() { alert('Welcome to DGi Boss! Let\'s play a game.'); }, 5000);
 
 
 var questions = ['Is Suzuki my favourite car manufactuer?', 'Is Android my favourite mobile OS?', ' Is Dancehall my favourite music genre?', 'Is Black my least favourite colour?', 'Do I seldom eat at Subway restaurants?' ];
 
 var replies = ['no', 'yes', 'yes', 'no', 'no'];
 
-var response1 = prompt(questions[0]).toLowerCase();
+//Prompt user for their name
+var user = prompt('Hi there, what is your name?');
+alert("Hi " + user + " !");
 
+for (var i = 0; i < questions.length; i++) {
+  var response1 = prompt(questions[i]).toLowerCase();
+  if (response1 === replies[i]) {
+    alert('You are correct!');
+  } else {
+    alert('You are wrong!');
+  }
+}
 
 
 
