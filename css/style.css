@@ -103,6 +103,18 @@ img {
   box-shadow: 0 0 5px 5px rgba(64, 224, 208, 1);
 }
 
+.heading {
+  text-align: center;
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(64, 224, 208, 0), rgba(64, 224, 208, 0.75), rgba(64, 224, 208, 0));
+  width: 400px;
+}
+
 @-webkit-keyframes zoomIn {
     from {
       opacity: 0;
@@ -133,6 +145,14 @@ img {
     height: 100%;
     width: 100%;
     position: relative;
+}
+
+.label {
+  color: white;
+}
+
+h5, h6 {
+  font-size: 0.75em;
 }
 
 @-webkit-keyframes pulse {
