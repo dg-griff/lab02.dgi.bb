@@ -12,7 +12,7 @@ if((response === 'no') || (response === 'n')) {
   alert('You are correct! Well done.')
   console.log(response + ' was the correct answer to the question.');
 } else {
-  alert('you are incorrect! Are you sure that you are taking this seriously?!');
+  alert('You are incorrect! Are you sure that you are taking this seriously?!');
   console.log(response + ' was the incorrect answer to the question.');
 }
 
@@ -21,7 +21,7 @@ if((response_2 === 'yes') || (response_2 === 'y')) {
   alert('You are correct! Well done.')
   console.log(response_2 + ' was the correct answer to the question.');
 } else {
-  alert('you are incorrect! Are you sure that you are taking this seriously?!');
+  alert('You are incorrect! Are you sure that you are taking this seriously?!');
   console.log(response_2 + ' was the incorrect answer to the question.');
 }
 
@@ -30,7 +30,7 @@ if((response_3 === 'yes') || (response_3 === 'y')) {
   alert('You are correct! Well done.')
   console.log(response_3 + ' was the correct answer to the question.');
 } else {
-  alert('you are incorrect! Are you sure that you are taking this seriously?!');
+  alert('You are incorrect! Are you sure that you are taking this seriously?!');
   console.log(response_3 + ' was the incorrect answer to the question.');
 }
 
@@ -39,7 +39,7 @@ if((response_4 === 'no') || (response_4 === 'n')) {
   alert('You are correct! Well done.')
   console.log(response_4 + ' was the correct answer to the question.');
 } else {
-  alert('you are incorrect! Are you sure that you are taking this seriously?!');
+  alert('You are incorrect! Are you sure that you are taking this seriously?!');
   console.log(response_4 + ' was the incorrect answer to the question.');
 }
 
@@ -48,7 +48,7 @@ if((response_5 === 'no') || (response_5 === 'n')) {
   alert('You are correct! Well done.')
   console.log(response_5 + ' was the correct answer to the question.');
 } else {
-  alert('you are incorrect! Are you sure that you are taking this seriously?!');
+  alert('You are incorrect! Are you sure that you are taking this seriously?!');
   console.log(response_5 + ' was the incorrect answer to the question.');
 }
 
