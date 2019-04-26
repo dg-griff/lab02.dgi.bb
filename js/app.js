@@ -1,55 +1,104 @@
 'use strict';
 
-// Prompt user for name
-var user = prompt('Hello and welcome to the DGi® Guessing Game! What is your name, please?').toUpperCase();
+// Variables for questions 1-5
+var questions = ['Is Suzuki my favourite car manufactuer?', 'Is Android my favourite mobile OS?', ' Is Dancehall my favourite music genre?', 'Is Black my least favourite colour?', 'Do I seldom eat at Subway restaurants?' ];
+var replies = ['no', 'yes', 'yes', 'no', 'no'];
+var replies_2 = ['n', 'y', 'y', 'n', 'n'];
+var score = 0;
 
-// Greet User
-alert('Pleasure to meet you, ' + user + '! Let\'s begin! I will ask you five questions about me and you are to respond with yes OR no.');
+// Variables for question 6
+var num = 150;
+var guess;
+var n = 4;
+var pkm = 0;
 
-// Ask Five Questions
-var response = prompt('Is Suzuki my favourite car manufacturer?').toLowerCase();
-if((response === 'no') || (response === 'n')) {
-  alert('You are correct! Well done.')
-  console.log(response + ' was the correct answer to the question.');
-} else {
-  alert('You are incorrect! Are you sure that you are taking this seriously?!');
-  console.log(response + ' was the incorrect answer to the question.');
+// Variables for 7th question
+var options = ['platz', 'corolla', 'auris'];
+var s = 6;
+var c = 0;
+
+// Questions 1-5
+//Prompt user for their name
+var user = prompt('Hello and welcome to the DGi® Guessing Game! Can you tell me your name, please?').toUpperCase();
+//Greet user
+alert("Pleasure to meet you, " + user + "! Let\'s begin! I will ask you five questions about myself. To respond, enter \"y or yes\" OR \"n or no\".");
+
+for (var i = 0; i < questions.length; i++) {
+  alert('Question ' + (i + 1) + ':');
+  var response = prompt(questions[i]).toLowerCase();
+  if ((response === replies[i]) || (response === replies_2[i])) {
+    alert('You are correct! Well done.');
+    score++;
+    console.log(response + ' was the correct answer to the question.');
+  } else {
+    alert('You are incorrect! Are you sure you are taking this seriously?!');
+    console.log(response + ' was the incorrect answer to the question.');
+  }
 }
 
-var response_2 = prompt('Is Android my favourite mobile Operating System?').toLowerCase();
-if((response_2 === 'yes') || (response_2 === 'y')) {
-  alert('You are correct! Well done.')
-  console.log(response_2 + ' was the correct answer to the question.');
+// Question 6
+alert('Question ' + (i + 1) + ':');
+var num_guess = prompt('I am an old school Pokémon player. Can you guess how many Pokémon I have caught so far?');
+if (num_guess == 150) {
+    pkm++;
+    score++;
+    alert('Congrats! You got it correct with only one guess!'); 
 } else {
-  alert('You are incorrect! Are you sure that you are taking this seriously?!');
-  console.log(response_2 + ' was the incorrect answer to the question.');
+  while ((num_guess != 150) && (n > 1)) {
+      n--;
+      var guess = prompt('You have ' + n + ' more attempt(s) to get it correct! Guess again!');
+      if (guess > num) {
+          alert('Whoa! Your guess was too high! I have not caught that many Pokémon!');
+      } else if (guess < num) {
+          alert('Whoa! Your guess was too low! I have caught more Pokémon than that!');
+      } else {
+          if (guess > num) {
+              alert('Whoa! Your guess was too high! I have not caught that many Pokémon!');
+            } else if (guess < num) {
+            alert('Whoa! Your guess was too low! I have caught more Pokémon than that!');
+            } else {
+              alert('You are absolutely correct! Well done!');
+              pkm++;
+              score++;
+              break;
+          }
+      }  
+  }
+
+  if (pkm > 0) {
+      alert('Alright, time for the final question!');
+  } else {
+    alert('You have reached the maximum number of 4 incorrect attempts! Time for the final question.');  
+  }  
 }
 
-var response_3 = prompt('Is Dancehall my favourite genre of music?').toLowerCase();
-if((response_3 === 'yes') || (response_3 === 'y')) {
-  alert('You are correct! Well done.')
-  console.log(response_3 + ' was the correct answer to the question.');
+// Question 7
+alert('Question ' + (i + 2) + ':');
+var reply = prompt('Toyota has manufactured many different car models over the years. Three of these models are my favourites. Can you guess one of them?').toLowerCase();
+
+if (options.indexOf(reply) !== -1) {
+    alert('You got it on the first try! Amazing job!');
+    c++;
+    score++;
 } else {
-  alert('You are incorrect! Are you sure that you are taking this seriously?!');
-  console.log(response_3 + ' was the incorrect answer to the question.');
+    while ((options.indexOf(reply) === -1) && (s > 1)) {
+        s--;
+        var retry = prompt('You have ' + s + ' more attempt(s) to get it correct! Guess again!');
+        if (options.indexOf(retry) !== -1) {
+            alert('You finally got it! Good job');
+            c++;
+            break;
+        } else {
+            alert('You are still wrong!');
+        }
+    }
 }
 
-var response_4 = prompt('Is Black my least favourite colour to wear?').toLowerCase();
-if((response_4 === 'no') || (response_4 === 'n')) {
-  alert('You are correct! Well done.')
-  console.log(response_4 + ' was the correct answer to the question.');
+if(c > 0) {
+    alert('Congrats on completing the game! Proceed to next screen for your final score.');
 } else {
-  alert('You are incorrect! Are you sure that you are taking this seriously?!');
-  console.log(response_4 + ' was the incorrect answer to the question.');
+    alert('You have reached the maximum of 6 incorrect attempts! Proceed to next screen for your final score.');
 }
 
-var response_5 = prompt('Is Subway the restaurant I eat at least often?').toLowerCase();
-if((response_5 === 'no') || (response_5 === 'n')) {
-  alert('You are correct! Well done.')
-  console.log(response_5 + ' was the correct answer to the question.');
-} else {
-  alert('You are incorrect! Are you sure that you are taking this seriously?!');
-  console.log(response_5 + ' was the incorrect answer to the question.');
-}
 
-alert('Game Over! Thanks for playing!');
+alert('Game Over! ' + user + ', your final score is: ' + score + ', meaning you got ' + score + ' out of 7 questions correct! Thanks for playing!');
