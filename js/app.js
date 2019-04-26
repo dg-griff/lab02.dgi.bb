@@ -58,6 +58,7 @@ if (num_guess == 150) {
             alert('Whoa! Your guess was too low! I have caught more Pokémon than that!');
             } else {
               alert('You are absolutely correct! Well done!');
+              pkm++;
               score++;
               break;
           }
