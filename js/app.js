@@ -10,7 +10,7 @@ var score = 0;
 var num = 150;
 var guess;
 var n = 4;
-var r = 0;
+var pkm = 0;
 
 // Variables for 7th question
 var options = ['platz', 'corolla', 'auris'];
@@ -40,9 +40,9 @@ for (var i = 0; i < questions.length; i++) {
 alert('Question ' + (i + 1) + ':');
 var num_guess = prompt('I am an old school Pokémon player. Can you guess how many Pokémon I have caught so far?');
 if (num_guess == 150) {
-  score++;
-  r++;
-  alert('Congrats! You got it correct with only one guess!'); 
+    pkm++;
+    score++;
+    alert('Congrats! You got it correct with only one guess!'); 
 } else {
   while ((num_guess != 150) && (n > 1)) {
       n--;
@@ -63,12 +63,13 @@ if (num_guess == 150) {
           }
       }  
   }
-  if (r < 0) {
-      alert('Alright time for the final question!');
+
+  if (pkm > 0) {
+      alert('Alright, time for the final question!');
   } else {
-    alert('You have reached the maximum number of 4 incorrect attempts! Time to move on to the final question.');
-  }
-    
+    alert('You have reached the maximum number of 4 incorrect attempts! Time for the final question.');  
+  }  
+}
 
 // Question 7
 alert('Question ' + (i + 2) + ':');
@@ -81,7 +82,7 @@ if (options.indexOf(reply) !== -1) {
 } else {
     while ((options.indexOf(reply) === -1) && (s > 1)) {
         s--;
-        var retry = prompt('You have ' + s + ' more attempt(s) to get it correct! Guess again!').toLowerCase();
+        var retry = prompt('You have ' + s + ' more attempt(s) to get it correct! Guess again!');
         if (options.indexOf(retry) !== -1) {
             alert('You finally got it! Good job');
             c++;
