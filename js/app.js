@@ -61,7 +61,7 @@ if (num_guess == 150) {
           }
       }  
   }
-  alert('You have reached the maximum number of 4 incorrect attempts! Game Over!');    
+  alert('You have reached the maximum number of 4 incorrect attempts! Time for the final question.');    
 }
 
 // Question 7
